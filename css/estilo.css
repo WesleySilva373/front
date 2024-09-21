@@ -1,3 +1,77 @@
-body{
-background: rgb(231, 38, 38);
+:root,
+:root[data-theme="dark"] {
+    --primary-color: #ffffff;
+    --primary-bg-color: #000;
+    --icon-color: #f2f542;
+}
+
+:root[data-theme="light"] {
+    --cor-texto-primario: #000000;
+    --primary-bg: #ffffff;
+    --icon-color: #5fbbe6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--primary-bg-color);
+    color: var(--primary-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: #554e4e;
+}
+
+i {
+    color: var(--icon-color);
+}
+
+
+#header {
+
+    display: flex;
+    /* Ativa o modelo de layout flexível */
+    flex-flow: row wrap;
+    /* Itens dispostos em linha e quebram para a próxima linha se necessário */
+    justify-content: space-between;
+    /* Distribui espaço entre os itens, alinhando o primeiro à esquerda e o último à direita */
+    align-items: center;
+    /* Alinha os itens verticalmente no centro do contêiner */
+    width: 100%;
+    padding: 0.5rem 1rem;
+    z-index: 2;
+}
+
+
+.logo {
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
+.header-toggle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#toggleTheme{
+    color: #f2f542;
+    font-size:2rem;
+    cursor: pointer;
+}
+
+.menu{      /* ul */
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg);
+    gap: 1.2rem;
 }
