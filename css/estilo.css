@@ -1,7 +1,3 @@
 body{
-   background: linear-gradient(black,white,red,blue)no-repeat;
-   animation: transition;
-}
-@keyframes{
-    
+background: rgb(231, 38, 38);
 }
