@@ -1,59 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-="dark">
+<html lang="pt-br" data-theme="dark">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wesley Da Silva/Portfolio👀</title>
-  <link rel="stylesheet" href="css/estilo.css"">
-    <link rel=" stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍻 Kaynan Ramos | Meu Website</title>
 
-<body>
-  <header id="header"> <!-- area de introdução -->
-    <nav class="header-nav"> <!-- tag para menu - menu pc-->
-      <ul class="menu menu-principal">
+    <!--  Estilo CSS -->
+    <link rel="stylesheet" href="css/estilo.css" />
 
+    <!-- Bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="header-nav">
+        <!-- menu ou navegation (shift+alt+a=comentário) -->
+        <!--  menu desktop -->
+        <ul class="menu menu-principal">
+          <li class="menu-item">
+            <a href="" class="menu-link">
+              <span class="menu-text"> Home </span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="" class="menu-link">
+              <span class=""> Projetos </span>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="" class="menu-link">
+              <span class="menu-text"> Sobre </span>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="" class="menu-link">
+              <span class="menu-text"> Contato </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- logo -->
+      <div class="header-logo">
+        <a href="#home">
+          <img  class="logo"  src="img/logo.png" 
+          alt="" />
+        </a>
+      </div>
+
+      <div class="header-toggle">
+        <i id="toggleTheme"  class="bi bi-sun"> </i>
+        <!-- sol -->
+      </div>
+    </header>
+    <!-- fim header -->
+
+    <!-- Menu Mobile -->
+     <nav class="nav-mobile">
+      <ul class="menu menu-mobile">
+        
         <li class="menu-item">
-          <a href="" class="menu-link">
-            <span class="menu-text">home</span>
+          <a href="" class="menu-link active">
+            <i class="bi bi-house-door"> </i>
+            <span class="menu-text"> Home </span>
           </a>
         </li>
 
         <li class="menu-item">
-          <a href="" class="menu-link">
-            <span class="menu-text">projetos</span>
+          <a href="" class="menu-link active">
+            <i class="bi bi-house-door"> </i>
+            <span class="menu-text"> Projetos </span>
           </a>
         </li>
 
         <li class="menu-item">
-          <a href="" class="menu-link">
-            <span class="menu-text">sobre</span></a>
+          <a href="" class="menu-link active">
+            <i class="bi bi-house-door"> </i>
+            <span class="menu-text"> Sobre </span>
+          </a>
         </li>
 
         <li class="menu-item">
-          <a href="" class="menu-link">
-            <span class="menu-text">contato</span>
+          <a href="" class="menu-link active">
+            <i class="bi bi-whatsapp"> </i>
+            <span class="menu-text"> Contato </span>
           </a>
         </li>
 
       </ul>
-    </nav>
 
-    <!-- logo -->
-    <div class="header-logo">
-      <a href="#home">
-        <img class="logo" src="img/img/logo.png" alt="">
-      </a>
-    </div>
-
-
-    <div class="header=toggle">
-      <i id="toggleTheme" class="bi bi-sun"></i> <!-- sol -->
-    </div>
-  </header>
-  <!-- fim mneu desk -->
-
-</body>
-
+    
+     </nav>
+  </body>
 </html>

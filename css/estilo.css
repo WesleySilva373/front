@@ -1,77 +1,92 @@
 :root,
 :root[data-theme="dark"] {
-    --primary-color: #ffffff;
-    --primary-bg-color: #000;
-    --icon-color: #f2f542;
+    --primary-color: #fff; /* cor do texto para o tema escuro */
+    --primary-bg: hsl(0, 0%, 0%); /* cor de fundo para o tema escuro */
+    --hover-menu: #6b6565; /* cor do menu ao passar o mouse */
+    --icon-color: #7b5ac7; /* cor dos ícones */
+    --icon-tema: #cfb12a;
 }
 
 :root[data-theme="light"] {
-    --cor-texto-primario: #000000;
-    --primary-bg: #ffffff;
-    --icon-color: #5fbbe6;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --cor-texto-primario: #000; /* cor do texto para o tema claro */
+    --primary-bg: #fff; /* cor de fundo para o tema claro */
+    --primary-color: #000; /* cor do texto para o tema claro */
 }
 
 body {
-    background: var(--primary-bg-color);
-    color: var(--primary-color);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: var(--primary-bg); /* define a cor de fundo do body */
+    color: var(--primary-color); /* define a cor do texto */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* fontes utilizadas para o texto */
 }
 
 a {
-    text-decoration: none;
-    color: var(--primary-color);
+    text-decoration: none; /* remove o sublinhado dos links */
+    color: var(--primary-color); /* define a cor padrão dos links */
 }
 
 a:hover {
-    color: #554e4e;
+    color: var(--hover-menu); /* define a cor dos links ao passar o mouse */
 }
 
 i {
-    color: var(--icon-color);
+    color: var(--icon-color); /* define a cor dos ícones */
 }
 
+/* Reset CSS para remover margens e preenchimentos padrão */
+* {
+    margin: 0; /* remove margens de todos os elementos */
+    padding: 0; /* remove preenchimentos de todos os elementos */
+    box-sizing: border-box; /* inclui bordas e preenchimentos no tamanho total do elemento */
+    list-style: none;
+}
+/* Fim do reset */
 
+/* Estilo para o header */
 #header {
-
-    display: flex;
-    /* Ativa o modelo de layout flexível */
-    flex-flow: row wrap;
-    /* Itens dispostos em linha e quebram para a próxima linha se necessário */
-    justify-content: space-between;
-    /* Distribui espaço entre os itens, alinhando o primeiro à esquerda e o último à direita */
-    align-items: center;
-    /* Alinha os itens verticalmente no centro do contêiner */
-    width: 100%;
-    padding: 0.5rem 1rem;
-    z-index: 2;
+    display: flex; /* ativa o modo de layout flexível */
+    flex-flow: row wrap; /* itens dispostos em linha e quebram para a próxima linha se necessário */
+    justify-content: space-between; /* distribui espaços entre os itens */
+    align-items: center; /* alinha os itens verticalmente no centro do contêiner */
+    width: 100%; /* largura total do contêiner */
+    padding: 0.5rem 1rem; /* espaçamento interno do header */
+    z-index: 2; /* define a ordem de empilhamento do header */
 }
 
-
+/* Estilo para a logo */
 .logo {
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 3.25rem; /* largura da logo */
+    height: 3.25rem; /* altura da logo */
 }
 
+/* Estilo para o botão de alternar tema */
 .header-toggle {
-    display: flex;
-    justify-content: flex-end;
+    display: flex; /* ativa o modo flexível */
+    justify-content: flex-end; /* alinha o conteúdo à direita */
 }
 
-#toggleTheme{
-    color: #f2f542;
-    font-size:2rem;
-    cursor: pointer;
+/* Estilo específico para o botão de alternar tema */
+#toggleTheme {
+    color: var(--icon-tema); /* cor do texto do botão */
+    font-size: 2rem; /* tamanho da fonte do botão */
+    cursor: pointer; /* muda o cursor para indicar que é clicável */
 }
 
-.menu{      /* ul */
-    display: flex;
-    align-items: center;
-    background: var(--primary-bg);
-    gap: 1.2rem;
+.menu { /* UL */
+  display: flex;
+  align-items: center;
+  background: var(--primary-bg);
+  gap: 1rem;
 }
+
+.menu-item {
+    width: 100%;
+}
+
+/* .menu-link {
+    display: flex;
+    align-items: ;
+}
+ */
+/* .header-nav {
+  display: none;
+} */
