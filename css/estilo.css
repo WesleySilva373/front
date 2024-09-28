@@ -9,6 +9,7 @@
     --icon-color: #7b5ac7;
     /* cor dos ícones */
     --icon-tema: #cfb12a;
+    --menu-texto: white;
 }
 
 :root[data-theme="light"] {
@@ -18,6 +19,11 @@
     /* cor de fundo para o tema claro */
     --primary-color: #000;
     /* cor do texto para o tema claro */
+    --menu-texto: black;
+}
+
+html[data-theme="light"] .logo {
+    filter: invert(1);
 }
 
 body {
@@ -44,6 +50,31 @@ a:hover {
 i {
     color: var(--icon-color);
     /* define a cor dos ícones */
+}
+
+b {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+
+h2 {}
+
+h3 {}
+
+p,
+span li {
+    font-size: 1rem;
+
+}
+
+p {
+
+    text-align: justify;
 }
 
 /* Reset CSS para remover margens e preenchimentos padrão */
@@ -75,6 +106,7 @@ i {
     /* espaçamento interno do header */
     z-index: 2;
     /* define a ordem de empilhamento do header */
+    background: var(--primary-bg);
 }
 
 /* Estilo para a logo */
@@ -121,6 +153,13 @@ i {
 }
  */
 
+.menu-icon {
+    display: flex;
+    animation: ease-in-out0.5s;
+    transform: 15/9;
+}
+
+
 .header-nav {
     display: none;
 }
@@ -140,6 +179,140 @@ i {
     padding: 0.5rem 1rem;
 }
 
+
+.menu-link.active .menu-text,
+.menu-link:hover .menu-text {
+    color: #169adc;
+}
+
+
+
+.menu-link.active:hover .bi-whatsapp{
+    color: green;
+}
+
+.menu-link:hover .bi-facebook{
+    color: rgb(15, 95, 199);
+}
+
+
+.menu-link:hover .bi-instagram{
+    color: rgb(202, 73, 202);
+}
+
+.menu-link:hover .bi-github{
+    color: rgb(48, 43, 58);
+}
+
+
+
+.menu-icon,
+.menu-text {
+    color: var(--cor-texto-primario);
+    font-weight: 600;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+}
+
+
+.menu-text {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.menu-principal {
+    gap: 3rem;
+}
+
+.menu-social {
+    gap: 2rem;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3rem;
+    color: var(--primary-color);
+    border: none;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 0.5s;
+}
+
+
+.btn span,
+.btn i {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+}
+
+
+.btn-primary span {
+    color: var(--primary-color);
+}
+
+.btn-primary {
+    border: 3px solid var(--primary-color);
+    /* Usando a cor preta diretamente */
+}
+
+
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+
+}
+
+.menu-icon {
+    width: 50px;
+    /* Largura do ícone */
+    height: 50px;
+    /* Altura do ícone */
+
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    transition: transform 0.3s ease-in-out;
+    /* Transição suave */
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho para 110% */
+}
+
+
+
+#home,
+.projetos,
+.sobre,
+.contato {
+    padding: 2.5rem 1rem;
+}
+
 /* responsividae */
 @media (min-width:768px) {
     #header {
@@ -147,11 +320,30 @@ i {
         padding: 1rem 6rem;
     }
 
-    .nav-mobile{
+    .nav-mobile {
         display: none;
     }
 
     .header-nav {
         display: flex;
+    }
+
+    .header-nav,
+    .header-toggle {
+        min-width: 30%;
+    }
+
+    h1 {
+        font-size: rem;
+    }
+
+    h2 {}
+
+    h3 {}
+
+    #home,
+    .projetos,
+    .sobre {
+        padding: 8rem 6rem 4rem 6rem;
     }
 }

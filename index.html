@@ -1,111 +1,173 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="dark">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Wesley Da Silva | Meu Website</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Wesley Da Silva | Meu Website</title>
 
-    <!--  Estilo CSS -->
-    <link rel="stylesheet" href="css/estilo.css" />
+  <!--  Estilo CSS -->
+  <link rel="stylesheet" href="css/estilo.css" />
 
-    <!-- Bootstrap icon -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-  </head>
-  <body>
-    <header id="header">
-      <nav class="header-nav">
-        <!-- menu ou navegation (shift+alt+a=comentário) -->
-        <!--  menu desktop -->
-        <ul class="menu menu-principal">
-          <li class="menu-item">
-            <a href="" class="menu-link">
-              <span class="menu-text"> Home </span>
-            </a>
-          </li>
-          <li class="menu-item">
-              <span class=""> Projetos </span>
-            </a>
-          </li>
+  <!-- Bootstrap icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
 
-          <li class="menu-item">
-            <a href="" class="menu-link">
-              <span class="menu-text"> Sobre </span>
-            </a>
-          </li>
-
-          <li class="menu-item">
-            <a href="" class="menu-link">
-              <span class="menu-text"> Contato </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- logo -->
-      <div class="header-logo">
-        <a href="#home">
-          <img  class="logo"  src="img/logo.png" 
-          alt="" />
-        </a>
-      </div>
-
-      <div class="header-toggle">
-        <i id="toggleTheme"  class="bi bi-sun"> </i>
-        <!-- sol -->
-      </div>
-    </header>
-    <!-- fim header -->
-
-    <!-- Menu Mobile -->
-     <nav class="nav-mobile">
-      <ul class="menu menu-mobile">
-        
+<body>
+  <header id="header">
+    <nav class="header-nav">
+      <!-- menu ou navegation (shift+alt+a=comentário) -->
+      <!--  menu desktop -->
+      <ul class="menu menu-principal">
         <li class="menu-item">
-          <a href="" class="menu-link active">
-            <i class="bi bi-house-door"> </i>
+          <a href="" class="menu-link" active>
             <span class="menu-text"> Home </span>
           </a>
         </li>
 
         <li class="menu-item">
-          <a href="" class="menu-link active">
-            <i class="bi bi-house-door"> </i>
+          <a href="#projetos" class="menu-link">
             <span class="menu-text"> Projetos </span>
           </a>
         </li>
 
         <li class="menu-item">
-          <a href="" class="menu-link active">
-            <i class="bi bi-house-door"> </i>
+          <a href="#sobre" class="menu-link">
             <span class="menu-text"> Sobre </span>
           </a>
         </li>
 
         <li class="menu-item">
-          <a href="" class="menu-link active">
-            <i class="bi bi-whatsapp"> </i>
+          <a href="#contato" class="menu-link">
             <span class="menu-text"> Contato </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- logo -->
+    <div class="header-logo">
+      <a href="#home">
+        <img class="logo" src="img/logo.png" alt="" />
+      </a>
+    </div>
+
+    <div class="header-toggle">
+      <i id="toggleTheme" class="bi bi-sun"> </i>
+      <!-- sol -->
+    </div>
+  </header>
+  <!-- fim header -->
+
+  <!-- Menu Mobile -->
+  <nav class="nav-mobile">
+    <ul class="menu menu-mobile">
+
+      <li class="menu-item">
+        <a href="" class="menu-link active">
+          <i class=" menu-icon bi bi-house-door"> </i>
+          <span class="menu-text"> Home </span>
+        </a>
+      </li>
+
+      <li class="menu-item">
+        <a href="" class="menu-link ">
+          <i class="menu-icon bi bi-house-door"> </i>
+          <span class="menu-text"> Projetos </span>
+        </a>
+      </li>
+
+      <li class="menu-item">
+        <a href="" class="menu-link">
+          <i class="menu-icon bi bi-house-door"> </i>
+          <span class="menu-text"> Sobre </span>
+        </a>
+      </li>
+
+      <li class="menu-item">
+        <a href="" class="menu-link ">
+          <i class="menu-icon bi bi-whatsapp"> </i>
+          <span class="menu-text"> Contato </span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <main id="home">
+    <div class="main-content">
+
+      <h1> <b>Soluções Criativas &</b> Desenvolvimento Front-End </h1>
+
+      <p> Wesley Da Silva Tenorio, São Paulo - SP , Desenvolvedor</p>
+
+      <ul class="menu menu-social">
+
+        <li>
+          <a class="menu-link" href="https://github.com/WesleySilva373" target="_blank">
+            <i class="menu-icon bi bi-github"></i>
+          </a> <!-- Tag <a> estava sem fechamento -->
+        </li>
+
+        <li>
+          <a class="menu-link" href="https://www.instagram.com/wesley.tenorio1/" target="_blank">
+            <i class="menu-icon bi bi-instagram"></i>
+          </a> <!-- Tag <a> estava sem fechamento -->
+        </li>
+
+        <li>
+          <a class="menu-link" href="https://www.facebook.com/wesley.tenorio.712/" target="_blank">
+            <i class="menu-icon bi bi-facebook"></i>
+          </a>
+        </li>
+
+
+        <li>
+          <a class="menu-link" href="https://wa.me/+5511989334975" target="_blank">
+            <i class="menu-icon bi bi-whatsapp"></i>
           </a>
         </li>
 
       </ul>
-     </nav>
 
-     <main id="home">
-       <div class="main-content">
+      <a href="#projetos">
+        <button class="btn btn-primary">
+          <span> Ver Projetos</span>
+          <i class="bi bi-arrow-down-right"></i>
+        </button>
+      </a>
 
-        <h1> <b>Soluções Criativas </b> Desenvolvimento Front-End </h1>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/Ejkb_YpuHWs?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n"
+          title="Começa aqui o novo @CursoemVideo de HTML5 e CSS3" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
 
-       </div>
+    </div>
+  </main>
 
-     </main>
+
+  <section id="Projetos" class="Projetos">
+    <h2>Projetos</h2>
+
+  </section>
 
 
-     <script src="./js/script.js"> </script>
 
-  </body>
+  <section id="Sobre" class="Sobre">
+    <h2>Sobre Mim</h2>
+
+  </section>
+
+
+
+  <section id="Contato" class="Contato">
+    <h2>Contato</h2>
+
+  </section>
+
+  <script src="./js/script.js"> </script>
+</body>
+
 </html>
