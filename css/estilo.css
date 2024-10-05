@@ -1,55 +1,50 @@
 :root,
 :root[data-theme="dark"] {
-    --primary-color: #fff;
-    /* cor do texto para o tema escuro */
-    --primary-bg: hsl(0, 0%, 0%);
-    /* cor de fundo para o tema escuro */
-    --hover-menu: #6b6565;
-    /* cor do menu ao passar o mouse */
-    --icon-color: #7b5ac7;
-    /* cor dos ícones */
-    --icon-tema: #cfb12a;
-    --menu-texto: white;
+    --primary-color: #ebebeb; /*color = texto */
+    --primary-bg: #1d1d1d;  /*bg = fundo */
+    --hover-menu: #898989;
+    --menu-texto:  #ebebeb;
+
+    --icon-color: #169adc;
+    --icone-tema: #d7b21e;
+    --hover-social: #169adc;
+
+    --cor-titulo: #c042eb;
 }
 
 :root[data-theme="light"] {
-    --cor-texto-primario: #000;
-    /* cor do texto para o tema claro */
-    --primary-bg: #fff;
-    /* cor de fundo para o tema claro */
-    --primary-color: #000;
-    /* cor do texto para o tema claro */
-    --menu-texto: black;
+    --primary-color: #1d1d1d;
+    --primary-bg: #ebebeb;
+    --hover-menu: #898989;
+    --menu-texto: #1d1d1d;
+    --hover-social:#169adc;
+
+    --cor-titulo: #1d1d1d;
+}
+
+/* CSS Geral */
+body{
+    background: var(--primary-bg);  /* fundo */
+    color: var(--primary-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px; 
 }
 
 html[data-theme="light"] .logo {
     filter: invert(1);
 }
 
-body {
-    background: var(--primary-bg);
-    /* define a cor de fundo do body */
-    color: var(--primary-color);
-    /* define a cor do texto */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* fontes utilizadas para o texto */
-}
-
-a {
+a{
     text-decoration: none;
-    /* remove o sublinhado dos links */
     color: var(--primary-color);
-    /* define a cor padrão dos links */
 }
 
-a:hover {
-    color: var(--hover-menu);
-    /* define a cor dos links ao passar o mouse */
+a:hover{
+  color: var(--hover-menu)
 }
 
 i {
-    color: var(--icon-color);
-    /* define a cor dos ícones */
+  color: var(--icon-color);
 }
 
 b {
@@ -57,86 +52,68 @@ b {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 200;
 }
 
+h2 {
+    
+}
 
-h2 {}
+h3 {
 
-h3 {}
+}
 
-p,
-span li {
+p, span, li{
     font-size: 1rem;
-
 }
 
 p {
-
     text-align: justify;
 }
 
-/* Reset CSS para remover margens e preenchimentos padrão */
-* {
-    margin: 0;
-    /* remove margens de todos os elementos */
-    padding: 0;
-    /* remove preenchimentos de todos os elementos */
-    box-sizing: border-box;
-    /* inclui bordas e preenchimentos no tamanho total do elemento */
-    list-style: none;
+
+/* Reset CSS  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
+/* fim reset  */
 
-/* Fim do reset */
-
-/* Estilo para o header */
+/* header  */
 #header {
     display: flex;
-    /* ativa o modo de layout flexível */
     flex-flow: row wrap;
-    /* itens dispostos em linha e quebram para a próxima linha se necessário */
+    /* Coloca o conteúdo em linha e permite a quebra de linha. */
     justify-content: space-between;
-    /* distribui espaços entre os itens */
+    /* Os itens dentro do container flexível serão distribuídos de maneira uniforme ao longo do eixo principal, com espaços iguais entre eles.  */
     align-items: center;
-    /* alinha os itens verticalmente no centro do contêiner */
     width: 100%;
-    /* largura total do contêiner */
     padding: 0.5rem 1rem;
-    /* espaçamento interno do header */
     z-index: 2;
-    /* define a ordem de empilhamento do header */
     background: var(--primary-bg);
 }
 
-/* Estilo para a logo */
-.logo {
-    width: 3.25rem;
-    /* largura da logo */
-    height: 3.25rem;
-    /* altura da logo */
+/* .header-logo .logo */
+.logo {  /* img */
+    width: 3.25rem;  /* comprimento */
+    height: 3.25rem;  /* altura  */
 }
 
-/* Estilo para o botão de alternar tema */
 .header-toggle {
     display: flex;
-    /* ativa o modo flexível */
     justify-content: flex-end;
-    /* alinha o conteúdo à direita */
 }
 
-/* Estilo específico para o botão de alternar tema */
 #toggleTheme {
-    color: var(--icon-tema);
-    /* cor do texto do botão */
+    color: var(--icone-tema);
     font-size: 2rem;
-    /* tamanho da fonte do botão */
     cursor: pointer;
-    /* muda o cursor para indicar que é clicável */
 }
 
-.menu {
-    /* UL */
+.menu {   /* UL */
     display: flex;
     align-items: center;
     background: var(--primary-bg);
@@ -149,28 +126,23 @@ p {
 
 /* .menu-link {
     display: flex;
-    align-items: ;
-}
- */
-
-.menu-icon {
-    display: flex;
-    animation: ease-in-out0.5s;
-    transform: 15/9;
-}
-
+    align-items: center;
+    gap: .5rem; 
+} */
 
 .header-nav {
     display: none;
 }
 
-/* menu-mobile */
+
+/* Menu Mobile */
+
 .menu-mobile {
-    width: 100vw;
+    width: 100vw; /*V W = Viewport Width */
     position: fixed;
     bottom: 0;
     justify-content: space-between;
-    border-top: 1px solid white;
+    border-top: 1px solid red;
 }
 
 .menu-mobile .menu-link {
@@ -182,40 +154,41 @@ p {
 
 .menu-link.active .menu-text,
 .menu-link:hover .menu-text {
-    color: #169adc;
+    color: #169adc;  /*cor de link */
 }
 
+.menu-icon {
+    display: flex;
+    animation: ease-in-out0.5s;
+    transform: 16/9;
+  }
 
 
-.menu-link:hover .bi-whatsapp{
+  .menu-link:hover .bi-whatsapp {
     color: rgb(17, 216, 17);
 }
 
-.menu-link:hover .bi-facebook{
+.menu-link:hover .bi-facebook {
     color: rgb(15, 95, 199);
 }
 
 
-.menu-link:hover .bi-instagram{
+.menu-link:hover .bi-instagram {
     color: rgb(202, 73, 202);
 }
 
-.menu-link:hover .bi-github{
+.menu-link:hover .bi-github {
     color: rgb(48, 43, 58);
 }
 
-
-               
-.menu-icon,
-.menu-text {
-    color: var(--cor-texto-primario);
+.menu-icon, .menu-text {
+    color: var(--menu-texto);
     font-weight: 600;
 }
 
-.menu-icon {
+.menu-icon{
     font-size: 1.5rem;
 }
-
 
 .menu-text {
     font-size: .75rem;
@@ -223,12 +196,13 @@ p {
 }
 
 .menu-principal {
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .menu-social {
     gap: 2rem;
 }
+
 
 
 .btn {
@@ -247,32 +221,27 @@ p {
 
 .btn:hover {
     transform: scale(1.05);
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out .5s;
 }
 
-
-.btn span,
-.btn i {
+.btn span, .btn i {
     font-size: 1.5rem;
     text-transform: uppercase;
-
 }
-
 
 .btn-primary span {
     color: var(--primary-color);
 }
 
 .btn-primary {
-    border: 3px solid var(--primary-color);
-    /* Usando a cor preta diretamente */
+    border: 1px solid var(--hover-menu);
 }
 
-
+/* Main */
 #home {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .main-content {
@@ -284,78 +253,181 @@ p {
 .video iframe {
     width: 100%;
     aspect-ratio: 16/9;
-
 }
-
-.menu-icon {
-    width: 50px;
-    /* Largura do ícone */
-    height: 50px;
-    /* Altura do ícone */
-
-    border-radius: 8px;
-    /* Bordas arredondadas */
-    transition: transform 0.3s ease-in-out;
-    /* Transição suave */
-}
-
-.menu-icon:hover {
-    transform: scale(1.1);
-    /* Aumenta o tamanho para 110% */
-}
-
-
-/* projetos */
-
-.projetos{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.projetos-container{
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
-
-
 
 #home, .projetos, .sobre, .contato {
     /* padding: 5rem 10rem; */
     padding: 2.5rem 1rem;
 }
 
-/* responsividae */
-@media (min-width:768px) {
-    #header {
-        position: fixed;
-        padding: 1rem 6rem;
-    }
+/* Projetos */
 
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.card-title {  /* H3 */
+    font-size: 2rem;
+    color: var(--cor-titulo);
+    font-weight: 100;
+    /* font-family: ; */
+}
+
+.card-descricao {  /*P = paragrafo*/
+    color: var(--cor-texto);
+   /*  font-size: ;
+    font-family: ; */
+}
+
+.card-lista, .sobre-lista { /*estrutura lista */
+    margin-left: 1.25rem;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.card-item, .sobre-item{  /* topicos lista */
+    /* list-style: none; */
+    margin-top: 5px;
+    list-style: disc;
+}
+
+.card-button, .card-descricao{
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: flex-start;
+}
+
+.card-button .btn {
+    padding: .65rem 1.25rem;
+    
+    margin-top: 15px;
+}
+
+.card-button .btn span {
+    font-size: 1rem;
+    
+    /* color: var(--texto-botao); */
+}
+
+.projetos .btn {
+    width: auto;
+    margin: auto;
+}
+
+
+
+
+
+/* Responsividade Responsivo */
+
+@media (min-width: 768px) {
+    #header {
+       position: fixed;
+       padding: 1rem 6rem;
+    }
     .nav-mobile {
         display: none;
     }
-
-    .header-nav {
+    .header-nav{
         display: flex;
     }
-
-    .header-nav,
+    .header-nav, 
     .header-toggle {
         min-width: 30%;
     }
-    
-    
     h1 {
         font-size: 5rem;
     }
     h2 {
-    
-    }
-    h3 {
-    
+        font-size: 3rem;
     }
     #home, .projetos, .sobre, .contato  {
         padding: 8rem 6rem 4rem 6rem;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+
+    .card-reverse{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+    }
+    
+    .card-cover {
+        width: 55%;
+    }
+        
+}
+
+@media (min-width: 1200px) {
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    #home {
+        padding: 10rem 6rem 2rem;
+    }
+
+    .main-content .btn {
+        width: auto;
+    }
+    
+    p, span, li {
+        font-size: 1.15rem;
+    }
+    .card-button .btn, 
+    .descricao-button .btn {
+        width: auto;
+    }
+}
+
+    
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 6.25rem;
+    }
+    h2{
+        font-size: 4.5rem;
+    }
+    h3 {
+        font-size: 3.25rem;
+    }
+    .header {
+        padding: 12rem 15rem 2rem;
+    }
+    .projetos, .sobre, .contato {
+        padding: 10rem 15rem 4rem;
     }
 }
