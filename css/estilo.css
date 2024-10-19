@@ -143,6 +143,7 @@ p {
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid red;
+    z-index: 9999;
 }
 
 .menu-mobile .menu-link {
@@ -159,19 +160,20 @@ p {
 
 .menu-icon {
     display: flex;
-    animation: ease-in-out0.5s;
-    transform: 16/9;
-  }
+    transition: transform 0.5s ease-in-out; /* Corrigido para usar transition */
+}
 
+.menu-link:hover .menu-icon {
+    transform: scale(1.1); /* Aplica a escala ao passar o mouse */
+}
 
-  .menu-link:hover .bi-whatsapp {
+.menu-link:hover .bi-whatsapp {
     color: rgb(17, 216, 17);
 }
 
 .menu-link:hover .bi-facebook {
     color: rgb(15, 95, 199);
 }
-
 
 .menu-link:hover .bi-instagram {
     color: rgb(202, 73, 202);
@@ -185,6 +187,7 @@ p {
     color: var(--menu-texto);
     font-weight: 600;
 }
+
 
 .menu-icon{
     font-size: 1.5rem;
@@ -321,7 +324,6 @@ p {
 
 .card-button .btn {
     padding: .65rem 1.25rem;
-    
     margin-top: 15px;
 }
 
@@ -374,16 +376,16 @@ p {
         flex-direction: row;
     }
 
+
     .card-reverse{
         flex-direction: row-reverse;
         justify-content: space-between;
 
     }
-    
     .card-cover {
         width: 55%;
     }
-        
+    
 }
 
 @media (min-width: 1200px) {
