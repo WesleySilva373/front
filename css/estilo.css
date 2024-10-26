@@ -1,9 +1,11 @@
 :root,
 :root[data-theme="dark"] {
-    --primary-color: #ebebeb; /*color = texto */
-    --primary-bg: #1d1d1d;  /*bg = fundo */
+    --primary-color: #ebebeb;
+    /*color = texto */
+    --primary-bg: #1d1d1d;
+    /*bg = fundo */
     --hover-menu: #898989;
-    --menu-texto:  #ebebeb;
+    --menu-texto: #ebebeb;
 
     --icon-color: #169adc;
     --icone-tema: #d7b21e;
@@ -17,34 +19,35 @@
     --primary-bg: #ebebeb;
     --hover-menu: #898989;
     --menu-texto: #1d1d1d;
-    --hover-social:#169adc;
+    --hover-social: #169adc;
 
     --cor-titulo: #1d1d1d;
 }
 
 /* CSS Geral */
-body{
-    background: var(--primary-bg);  /* fundo */
+body {
+    background: var(--primary-bg);
+    /* fundo */
     color: var(--primary-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 22px; 
+    font-size: 22px;
 }
 
 html[data-theme="light"] .logo {
     filter: invert(1);
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--primary-color);
 }
 
-a:hover{
-  color: var(--hover-menu)
+a:hover {
+    color: var(--hover-menu)
 }
 
 i {
-  color: var(--icon-color);
+    color: var(--icon-color);
 }
 
 b {
@@ -54,21 +57,21 @@ b {
 h1 {
     font-size: 2.5rem;
     font-weight: 200;
-    font-family: Oswald,sans-serif;
+    font-family: Oswald, sans-serif;
     white-space: normal;
-    
+
 }
 
 h2 {
     font-family: "Bitter", serif;
-    
-}
-
-h3 {
 
 }
 
-p, span, li{
+h3 {}
+
+p,
+span,
+li {
     font-size: 1rem;
 }
 
@@ -79,12 +82,13 @@ p {
 
 
 /* Reset CSS  */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
 }
+
 /* fim reset  */
 
 /* header  */
@@ -102,9 +106,12 @@ p {
 }
 
 /* .header-logo .logo */
-.logo {  /* img */
-    width: 6.00rem;  /* comprimento */
-    height: 3.25rem;  /* altura  */
+.logo {
+    /* img */
+    width: 6.00rem;
+    /* comprimento */
+    height: 3.25rem;
+    /* altura  */
 }
 
 .header-toggle {
@@ -118,7 +125,8 @@ p {
     cursor: pointer;
 }
 
-.menu {   /* UL */
+.menu {
+    /* UL */
     display: flex;
     align-items: center;
     background: var(--primary-bg);
@@ -143,7 +151,8 @@ p {
 /* Menu Mobile */
 
 .menu-mobile {
-    width: 100vw; /*V W = Viewport Width */
+    width: 100vw;
+    /*V W = Viewport Width */
     position: fixed;
     bottom: 0;
     justify-content: space-between;
@@ -160,16 +169,19 @@ p {
 
 .menu-link.active .menu-text,
 .menu-link:hover .menu-text {
-    color: #169adc;  /*cor de link */
+    color: #169adc;
+    /*cor de link */
 }
 
 .menu-icon {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Corrigido para usar transition */
+    transition: transform 0.5s ease-in-out;
+    /* Corrigido para usar transition */
 }
 
 .menu-link:hover .menu-icon {
-    transform: scale(1.1); /* Aplica a escala ao passar o mouse */
+    transform: scale(1.1);
+    /* Aplica a escala ao passar o mouse */
 }
 
 .menu-link:hover .bi-whatsapp {
@@ -188,13 +200,14 @@ p {
     color: rgb(48, 43, 58);
 }
 
-.menu-icon, .menu-text {
+.menu-icon,
+.menu-text {
     color: var(--menu-texto);
     font-weight: 600;
 }
 
 
-.menu-icon{
+.menu-icon {
     font-size: 1.5rem;
 }
 
@@ -232,7 +245,8 @@ p {
     transition: ease-in-out .5s;
 }
 
-.btn span, .btn i {
+.btn span,
+.btn i {
     font-size: 1.5rem;
     text-transform: uppercase;
 }
@@ -263,7 +277,10 @@ p {
     aspect-ratio: 16/9;
 }
 
-#home, .projetos, .sobre, .contato {
+#home,
+.projetos,
+.sobre,
+.contato {
     /* padding: 5rem 10rem; */
     padding: 2.5rem 1rem;
 
@@ -297,32 +314,39 @@ p {
     gap: 1rem;
 }
 
-.card-title {  /* H3 */
+.card-title {
+    /* H3 */
     font-size: 2rem;
     color: var(--cor-titulo);
     font-weight: 100;
     /* font-family: ; */
 }
 
-.card-descricao {  /*P = paragrafo*/
+.card-descricao {
+    /*P = paragrafo*/
     color: var(--cor-texto);
-   /*  font-size: ;
+    /*  font-size: ;
     font-family: ; */
 }
 
-.card-lista, .sobre-lista { /*estrutura lista */
+.card-lista,
+.sobre-lista {
+    /*estrutura lista */
     margin-left: 1.25rem;
     margin-top: 15px;
     margin-bottom: 25px;
 }
 
-.card-item, .sobre-item{  /* topicos lista */
+.card-item,
+.sobre-item {
+    /* topicos lista */
     /* list-style: none; */
     margin-top: 5px;
     list-style: disc;
 }
 
-.card-button, .card-descricao{
+.card-button,
+.card-descricao {
     display: flex;
     flex-wrap: row wrap;
     justify-content: flex-start;
@@ -335,7 +359,7 @@ p {
 
 .card-button .btn span {
     font-size: 1rem;
-    
+
     /* color: var(--texto-botao); */
 }
 
@@ -346,13 +370,13 @@ p {
 
 /* sobre */
 
-.sobre{
+.sobre {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.sobre-logo{
+.sobre-logo {
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -361,32 +385,121 @@ p {
     border: 8px solid var(--primary-color);
 }
 
+.sobre-conteudo1 .sobre-conteudo2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+}
 
+.sobre-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 0px 20px;
+}
+
+
+.sobre-icones {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.sobre-icones i {
+    font-size: 1.25rem;
+    color: beige;
+}
+
+.sobre-conteudo2 .col1,
+.sobre-conteudo2 .col2 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 2rem;
+}
+
+.sobre-conteudo2 .col1 .row1,
+.sobre-conteudo2 .col1 .row2{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.accordion-header{
+    width: 100%;
+    display: flex;
+    padding: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    background:  transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: ease-in-out 3s;
+}
+.accordion-header span{
+    color: var(--primary-color);
+}
+
+.accordion-body{
+    display: none;
+    padding: 1.52rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .625rem;
+    border: 1px solid var(--primary-color);
+}
+
+.accordion-item.active .accordion-header{
+    background: var(rgba(255, 255, 255, 0.747));
+    color: var(--primary-bg);
+}
+.accordion-item.active .accordion-body{
+    display: flex;
+}
+
+.accordion-item.active .bi-caret-down-fill{
+    transform: rotate(180deg);
+    transition: ease-in-out .3s;
+
+}
 
 /* Responsividade Responsivo */
 
 @media (min-width: 768px) {
     #header {
-       position: fixed;
-       padding: 1rem 6rem;
+        position: fixed;
+        padding: 1rem 6rem;
     }
+
     .nav-mobile {
         display: none;
     }
-    .header-nav{
+
+    .header-nav {
         display: flex;
     }
-    .header-nav, 
+
+    .header-nav,
     .header-toggle {
         min-width: 30%;
     }
+
     h1 {
         font-size: 5rem;
     }
+
     h2 {
         font-size: 3rem;
     }
-    #home, .projetos, .sobre, .contato  {
+
+    #home,
+    .projetos,
+    .sobre,
+    .contato {
         padding: 8rem 6rem 4rem 6rem;
     }
 }
@@ -398,15 +511,27 @@ p {
     }
 
 
-    .card-reverse{
+    .card-reverse {
         flex-direction: row-reverse;
         justify-content: space-between;
 
     }
+
     .card-cover {
         width: 55%;
     }
-    
+
+    .sobe {
+        gap: 5rem;
+    }
+
+    .sobre-conteudo1,
+    .sobre-conteudo2 {
+        display: grid;
+        grid-template-columns: 34% 60%;
+
+    }
+
 }
 
 @media (min-width: 1200px) {
@@ -426,32 +551,40 @@ p {
     .main-content .btn {
         width: auto;
     }
-    
-    p, span, li {
+
+    p,
+    span,
+    li {
         font-size: 1.15rem;
     }
-    .card-button .btn, 
+
+    .card-button .btn,
     .descricao-button .btn {
         width: auto;
     }
 }
 
-    
+
 @media (min-width: 1400px) {
     h1 {
         font-size: 6.25rem;
     }
-    h2{
+
+    h2 {
         font-size: 4.5rem;
     }
+
     h3 {
         font-size: 3.25rem;
     }
+
     .header {
         padding: 12rem 15rem 2rem;
     }
-    .projetos, .sobre, .contato {
+
+    .projetos,
+    .sobre,
+    .contato {
         padding: 10rem 15rem 4rem;
     }
 }
-
