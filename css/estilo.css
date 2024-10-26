@@ -67,7 +67,9 @@ h2 {
 
 }
 
-h3 {}
+h3 {
+    font-size: 200px;
+}
 
 p,
 span,
@@ -165,6 +167,7 @@ p {
     justify-content: center;
     padding: 0.5rem 1rem;
 }
+
 
 
 .menu-link.active .menu-text,
@@ -329,12 +332,23 @@ p {
     font-family: ; */
 }
 
+.card-body{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.card-list{
+    padding: 20px;
+}
+
 .card-lista,
 .sobre-lista {
     /*estrutura lista */
     margin-left: 1.25rem;
     margin-top: 15px;
     margin-bottom: 25px;
+
 }
 
 .card-item,
@@ -344,6 +358,8 @@ p {
     margin-top: 5px;
     list-style: disc;
 }
+
+
 
 .card-button,
 .card-descricao {
@@ -509,7 +525,6 @@ p {
     .projeto-card {
         flex-direction: row;
     }
-
 
     .card-reverse {
         flex-direction: row-reverse;
