@@ -446,7 +446,7 @@ align-items: center;
     gap: .5rem;
 }
 
-.accordion-header{
+.accordion-header1{
     width: 100%;
     display: flex;
     padding: 0.75rem;
@@ -458,11 +458,11 @@ align-items: center;
     cursor: pointer;
     transition: ease-in-out 3s;
 }
-.accordion-header span{
+.accordion-header1 span{
     color: var(--primary-color);
 }
 
-.accordion-body{
+.accordion-body1{
     display: none;
     padding: 1.52rem;
     flex-direction: column;
@@ -471,11 +471,11 @@ align-items: center;
     border: 1px solid var(--primary-color);
 }
 
-.accordion-item.active .accordion-header{
+.accordion-item.active .accordion-header1{
     background: var(rgba(255, 255, 255, 0.747));
     color: var(--primary-bg);
 }
-.accordion-item.active .accordion-body{
+.accordion-item.active .accordion-body1{
     display: flex;
 }
 
@@ -505,6 +505,20 @@ align-items: center;
 }
 .contato .email{
     text-transform: uppercase;
+}
+
+footer{
+    margin-bottom: 5rem;
+}
+
+footer p{
+    font-size: .875rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p a{
+color: #169adc;
 }
 
 /* Responsividade Responsivo */
