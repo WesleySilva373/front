@@ -12,6 +12,7 @@
     --hover-social: #169adc;
 
     --cor-titulo: #c042eb;
+    --borda: rgb(247, 247, 247);
 }
 
 :root[data-theme="light"] {
@@ -22,6 +23,7 @@
     --hover-social: #169adc;
 
     --cor-titulo: #1d1d1d;
+    --borda: rgb(3, 3, 3);
 }
 
 /* CSS Geral */
@@ -152,15 +154,19 @@ p {
 
 /* Menu Mobile */
 
-.menu-mobile {
-    width: 100vw;
-    /*V W = Viewport Width */
-    position: fixed;
-    bottom: 0;
-    justify-content: space-between;
-    border-top: 1px solid red;
-    z-index: 9999;
-}
+    .menu-mobile{
+        width: 100vw;
+        position: fixed; /* Fixa a posição */
+        top: 0; /* Posiciona no topo da tela */
+        left: 0; /* Certifique-se de que o menu ocupa toda a largura */
+        justify-content: space-between;
+        border-top: 1px solid red;
+        z-index: 9999;
+        background: var(--primary-bg); /* Adicione o fundo do menu para que ele fique visível */
+        display: none; /* Por padrão, esconder o menu mobile */
+    }
+    
+
 
 .menu-mobile .menu-link {
     flex-direction: column;
@@ -483,6 +489,28 @@ align-items: center;
 
 }
 
+.contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-top: 1px solid var(--borda) ;
+    border-bottom: 1px solid var(--borda);
+}
+
+.contato p {
+    text-align: center;
+    text-shadow: ;
+}
+
+.contato .btn{
+    width: auto;
+}
+.contato .email{
+    text-transform: uppercase;
+}
+
 /* Responsividade Responsivo */
 
 @media (min-width: 768px) {
@@ -517,6 +545,10 @@ align-items: center;
     .sobre,
     .contato {
         padding: 8rem 6rem 4rem 6rem;
+    }
+    .contato{
+        padding: 6rem;
+
     }
 }
 
