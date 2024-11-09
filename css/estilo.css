@@ -227,8 +227,11 @@ p {
 
 .menu-social {
     gap: 2rem;
-}
 
+}
+.menu-social .menu-icon{
+    gap: .5rem;
+}
 
 
 .btn {
