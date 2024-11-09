@@ -70,7 +70,7 @@ h2 {
 }
 
 h3 {
-    font-size: 200px;
+    font-size: 20px;
 }
 
 p,
@@ -497,7 +497,7 @@ align-items: center;
 
 .contato p {
     text-align: center;
-    text-shadow: ;
+    
 }
 
 .contato .btn{
@@ -547,9 +547,7 @@ align-items: center;
 
     }
 
-    .menu-mobile.active {
-        display: flex; /* Torna o menu visível quando a classe "active" for adicionada */
-    }
+
 }
 
 
